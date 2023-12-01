@@ -4,9 +4,7 @@ import Data.Char (digitToInt, isLetter)
 
 main = do
     contents <- readFile "day1_data"
-    --print $ replaceSubstrings (["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]) "3fiveeightwo"
-    --print $ sum $ map (result) (parser contents)
-    --print $ map (result . replaceSubstrings (["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"])) (parser contents)
+    print $ sum $ map (result) (parser contents)
     print $ sum $ map (result . replaceSubstrings (["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"])) (parser contents)
 
 parser :: String -> [String]
